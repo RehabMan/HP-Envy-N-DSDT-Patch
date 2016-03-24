@@ -9,6 +9,11 @@ http://www.tonymacx86.com/yosemite-laptop-guides/162939-guide-hp-envy-haswell-se
 
 ### Change Log:
 
+2016-03-23
+
+- This project forked from K-series Envy to support N-series Envy
+
+
 2015-11-18
 
 - SSDT-HACK method from u430 project

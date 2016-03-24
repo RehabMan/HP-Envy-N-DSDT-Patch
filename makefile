@@ -10,7 +10,7 @@
 #
 
 BUILDDIR=./build
-HDA=ALC290
+HDA=ALC282
 RESOURCES=./Resources_$(HDA)
 HDAINJECT=AppleHDA_$(HDA).kext
 USBINJECT=USBXHC_Envy.kext

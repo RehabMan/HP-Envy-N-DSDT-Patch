@@ -96,15 +96,16 @@
 					<data>
 					AwAAAA==
 					</data>
+					<key>Codec</key>
+					<string>Mirone - Realtek ALC282</string>
 					<key>CodecID</key>
-					<integer>283902608</integer>
-					<key>Comment</key>
-					<string>macpeetALC</string>
+					<integer>283902594</integer>
 					<key>ConfigData</key>
 					<data>
-					AaccIAGnHRABpx6BAacfAAEnHDABJx0AASce
-					owEnH5ABRxxAAUcdAAFHHhcBRx+QAVccUAFX
-					HRABVx4hAVcfAAFHDAI=
+					ASccQAEnHQABJx6gAScfkAFHHBABRx0AAUce
+					FwFHH5ABhxwwAYcdEAGHHoEBhx8AAeccIAHn
+					HRAB5x5EAecfAAIXHFACFx0QAhceIQIXHwAB
+					RwwC
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
