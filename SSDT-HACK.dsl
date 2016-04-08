@@ -552,23 +552,17 @@ DefinitionBlock ("", "SSDT", 2, "hack", "hack", 0)
                     {
                         Store (RFL0(), Local2)
                     }
+                    ElseIf (LLess (Local3, 0x11))
+                    {
+                        Store (RFL1(), Local2)
+                    }
+                    ElseIf (LLess (Local3, 0x19))
+                    {
+                        Store (RFL2(), Local2)
+                    }
                     Else
                     {
-                        If (LLess (Local3, 0x11))
-                        {
-                            Store (RFL1(), Local2)
-                        }
-                        Else
-                        {
-                            If (LLess (Local3, 0x19))
-                            {
-                                Store (RFL2(), Local2)
-                            }
-                            Else
-                            {
-                                Store (RFL3(), Local2)
-                            }
-                        }
+                        Store (RFL3(), Local2)
                     }
 
                     Increment (Local3)
