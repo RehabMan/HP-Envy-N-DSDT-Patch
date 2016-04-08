@@ -517,9 +517,74 @@ DefinitionBlock ("", "SSDT", 2, "hack", "hack", 0)
             {
                 Store (And (Local1, 0x1F), Local0)
             }
-            ElseIf (LEqual (Arg0, 0x07))
+            Else
             {
-                Store (SMB0, Arg3)
+                If (LEqual (Arg0, 0x07))
+                {
+                    Store (SMB0, Arg3)
+                }
+
+                If (LEqual (Arg0, 0x47))
+                {
+                    Store (SMB0, Arg3)
+                }
+
+                If (LEqual (Arg0, 0xC7))
+                {
+                    Store (SMB0, Arg3)
+                }
+
+                If (LEqual (Arg0, 0x09))
+                {
+                    Store (B1B2(SMWX,SMWY), Arg3)
+                }
+
+                If (LEqual (Arg0, 0x0B))
+                {
+                    Store (BCNT, Local3)
+                    ShiftRight (0x0100, 0x03, Local2)
+                    If (LGreater (Local3, Local2))
+                    {
+                        Store (Local2, Local3)
+                    }
+
+                    If (LLess (Local3, 0x09))
+                    {
+                        Store (RFL0(), Local2)
+                    }
+                    Else
+                    {
+                        If (LLess (Local3, 0x11))
+                        {
+                            Store (RFL1(), Local2)
+                        }
+                        Else
+                        {
+                            If (LLess (Local3, 0x19))
+                            {
+                                Store (RFL2(), Local2)
+                            }
+                            Else
+                            {
+                                Store (RFL3(), Local2)
+                            }
+                        }
+                    }
+
+                    Increment (Local3)
+                    Store (Buffer (Local3) {}, Local4)
+                    Decrement (Local3)
+                    Store (Zero, Local5)
+                    While (LGreater (Local3, Local5))
+                    {
+                        GBFE (Local2, Local5, RefOf (Local6))
+                        PBFE (Local4, Local5, Local6)
+                        Increment (Local5)
+                    }
+
+                    PBFE (Local4, Local5, Zero)
+                    Store (Local4, Arg3)
+                }
             }
 
             Release (MUT0)
