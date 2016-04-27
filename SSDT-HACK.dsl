@@ -113,7 +113,11 @@ DefinitionBlock ("", "SSDT", 2, "hack", "hack", 0)
                         "UsbConnector", 255,
                         "port", Buffer() { 0x07, 0, 0, 0 },
                     },
-                    // HP18 not used
+                    "HP18", Package()   // touch screen
+                    {
+                        "UsbConnector", 255,
+                        "port", Buffer() { 0x08, 0, 0, 0 },
+                    },
                 },
             },
             // EH02 not present
