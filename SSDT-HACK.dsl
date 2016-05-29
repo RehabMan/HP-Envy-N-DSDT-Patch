@@ -316,6 +316,10 @@ DefinitionBlock ("", "SSDT", 2, "hack", "hack", 0)
                     "e010=4d",  // previous track
                 },
             },
+            "Synaptics TouchPad", Package()
+            {
+                "DynamicEWMode", ">y",
+            },
         })
     }
 
