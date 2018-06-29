@@ -153,7 +153,10 @@
 		<key>SSDT</key>
 		<dict>
 			<key>Generate</key>
-			<false/>
+			<dict>
+				<key>PluginType</key>
+				<true/>
+			</dict>
 		</dict>
 	</dict>
 	<key>Boot</key>
@@ -187,7 +190,7 @@
 						<key>Key</key>
 						<string>layout-id</string>
 						<key>Value</key>
-						<data>AwAAAA==</data>
+						<data>AgAAAA==</data>
 					</dict>
 					<dict>
 						<key>Key</key>
@@ -208,7 +211,7 @@
 						<key>Key</key>
 						<string>layout-id</string>
 						<key>Value</key>
-						<data>AwAAAA==</data>
+						<data>AgAAAA==</data>
 					</dict>
 					<dict>
 						<key>Key</key>
